@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>TODO List</title>
+
+        <meta name='description' content='A simple app to track TODO items'>
+        <meta name='author' content=''>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+        <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' type='text/css' href='styles/main.css'>
+
+
+    </head>
+    <body>
+
+        <header>
+            <h1>todos</h1>
+        </header>
+
+        <main>
+            <form action='' method='post'>
+                <input type='text' class='new-todo' placeholder='What needs to be done?'>
+            </form>
+
+            <ul class='items'>
+
+                <!-- Example of a single TODO item -->
+                <!-- Note that this one is hidden on the page! -->
+                <!-- <li class='hide'>
+                    <article>
+                        <button class='check'></button>
+                        <p>[INSERT TODO TEXT HERE]</p>
+                        <button class='delete'>X</button>
+                    </article>
+                </li> -->
+
+            </ul>
+
+            <footer>
+                <p class='remaining'><span class='incomplete-items'>0</span> items left</p>
+                <nav>
+                    <ul>
+                        <li><button class='show-all active'>All</button></li>
+                        <li><button class='show-active'>Active</button></li>
+                        <li><button class='show-completed'>Completed</button></li>
+                    </ul>
+                </nav>
+                <button class='clear'>Clear completed</button>
+            </footer>
+        </main>
+
+        <!-- Handlebars template -->
+    <script id="to-do-list" type="text/x-handlebars-template">
+        <li class='hide list-item'>
+            <article>
+                <button class='check'></button>
+                <p>{{task}}</p>
+                <button class='delete'>X</button>
+            </article>
+        </li>
+    </script>
+    <script src="js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="js/vendor/handlebars-v4.0.5.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

@@ -6,6 +6,7 @@
             function bindEvents() {
                 checkMark();
                 deleteItem();
+                editItems();
                 allItems();
                 clearItems();
                 activeItems();
@@ -25,6 +26,12 @@
                     event.preventDefault();
                     $('.items li:hover').remove();
                     itemCount();
+                });
+            }
+
+            function editItems() {
+                $('.items').on('click', function() {
+                    $('p').attr('contenteditable', true);
                 });
             }
 
